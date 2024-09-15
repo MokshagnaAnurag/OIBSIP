@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/d213862c-4f6e-4553-a10f-da382a7cd614)# OIBSIP
+# OIBSIP
 
 # Simple Calculator
 
@@ -31,8 +31,3 @@ Navigate into the project directory:
 
 ```bash
 cd simple-calculator
-
-
-
-
-
