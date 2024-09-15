@@ -1,4 +1,4 @@
-# OIBSIP
+![image](https://github.com/user-attachments/assets/d213862c-4f6e-4553-a10f-da382a7cd614)# OIBSIP
 
 # Simple Calculator
 
@@ -13,7 +13,8 @@ A basic calculator built with HTML, CSS, and JavaScript. This calculator perform
 
 ## Screenshots
 
-![Calculator Screenshot](screenshot.png)  <!-- Replace with a screenshot image -->
+![Calculator Screenshot](![image](https://github.com/user-attachments/assets/cd648031-9f55-4e4c-a1e4-c913195f766e)
+)  <!-- Replace with a screenshot image -->
 
 ## Technologies Used
 
@@ -35,5 +36,8 @@ Navigate into the project directory:
 
 ```bash
 cd simple-calculator
+
+
+
 
 
