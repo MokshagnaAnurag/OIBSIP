@@ -11,11 +11,6 @@ A basic calculator built with HTML, CSS, and JavaScript. This calculator perform
 - **Clear Functionality**: Reset the display with a clear button.
 - **Error Handling**: Displays an error message if an invalid operation is attempted.
 
-## Screenshots
-
-![Calculator Screenshot](![image](https://github.com/user-attachments/assets/cd648031-9f55-4e4c-a1e4-c913195f766e)
-)  <!-- Replace with a screenshot image -->
-
 ## Technologies Used
 
 - **HTML**: Markup for the calculator structure.
