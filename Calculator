@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: ;
+            margin: 0;
+        }
+
+        .calculator {
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            background: #fff;
+            overflow: hidden;
+        }
+
+        .display {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: right;
+        }
+
+        #display {
+            width: 100%;
+            border: none;
+            background: #333;
+            color: #fff;
+            font-size: 2em;
+            text-align: right;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1px;
+        }
+
+        button {
+            background: #eee;
+            border: none;
+            padding: 20px;
+            font-size: 1.5em;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #ddd;
+        }
+
+        .operator {
+            background: #ff9500;
+            color: #fff;
+        }
+
+        .operator:hover {
+            background: #e68900;
+        }
+
+        #equals {
+            background: #4caf50;
+            color: #fff;
+            grid-column: span 2;
+        }
+
+        #equals:hover {
+            background: #45a049;
+        }
+
+        #clear {
+            background: #f44336;
+            color: #fff;
+            grid-column: span 2;
+        }
+
+        #clear:hover {
+            background: #d32f2f;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <div class="display">
+            <input type="text" id="display" disabled>
+        </div>
+        <div class="buttons">
+            <button class="btn" data-value="7">7</button>
+            <button class="btn" data-value="8">8</button>
+            <button class="btn" data-value="9">9</button>
+            <button class="btn operator" data-value="/">/</button>
+            <button class="btn" data-value="4">4</button>
+            <button class="btn" data-value="5">5</button>
+            <button class="btn" data-value="6">6</button>
+            <button class="btn operator" data-value="*">*</button>
+            <button class="btn" data-value="1">1</button>
+            <button class="btn" data-value="2">2</button>
+            <button class="btn" data-value="3">3</button>
+            <button class="btn operator" data-value="-">-</button>
+            <button class="btn" data-value="0">0</button>
+            <button class="btn" data-value=".">.</button>
+            <button class="btn" id="equals">=</button>
+            <button class="btn operator" data-value="+">+</button>
+            <button class="btn" id="clear">C</button>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const display = document.getElementById('display');
+
+            const buttons = Array.from(document.querySelectorAll('.btn'));
+            const equals = document.getElementById('equals');
+            const clear = document.getElementById('clear');
+
+            buttons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    if (button.dataset.value) {
+                        display.value += button.dataset.value;
+                    }
+                });
+            });
+
+            equals.addEventListener('click', () => {
+                try {
+                    display.value = eval(display.value);
+                } catch {
+                    display.value = 'Error';
+                }
+            });
+
+            clear.addEventListener('click', () => {
+                display.value = '';
+            });
+        });
+    </script>
+</body>
+</html>
